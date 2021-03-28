@@ -56,3 +56,10 @@ We'll use this dependency to automate our webpack flux. This way it not more nec
 yarn add webpack-dev-server -D
 ```
 Add a devServer option on webpack.config.js
+
+## Source maps
+Webpack's feature that allow us to see the original code at the moment of fix some error, for example, and not the transpiled file. That way we can find errors more quickly.
+Add the follow option on webpack.config:
+```
+devtool: 'eval-source-map'
+```
