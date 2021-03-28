@@ -20,6 +20,21 @@ yarn add @babel/core @babel/cli @babel/preset-env -D
 ```
 yarn add @babel/preset-react -D
 ```
+- To inject the traspiled file to html we'll use:
+```
+yarn add html-webpack-plugin -D
+```
+
+**News of React 17**
+- You don't need more to import React from react dependency on all jsx files.
+- Now it is possible make a setting to do it automatic. So on babel.config.js set the runtime attribute for @babel/preset-react
+```
+...
+['@babel/preset-react', {
+    runtime: 'automatic'
+}]
+...
+```
 
 ## Webpack
 - Allow us import several kind of files like css, hbs, sass and others, and transpile it for the browsers.
@@ -30,3 +45,14 @@ yarn add webpack webpack-cli babel-loader -D
 ```
 
 - Create the file webpack.config.js where will be all the settings to import modules.
+
+**An important set up**
+You can choose if the webpack run in a development or production environment.
+For that you need to use the mode option and set it like development or production.
+
+**webpack-dev-server**
+We'll use this dependency to automate our webpack flux. This way it not more necessary compile everytime before run the application.
+```
+yarn add webpack-dev-server -D
+```
+Add a devServer option on webpack.config.js
