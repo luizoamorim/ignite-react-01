@@ -16,7 +16,7 @@ yarn add @babel/core @babel/cli @babel/preset-env -D
 ```
 
 - Create a babel.config.js
-- Because of React use html inner of javascript we need to add another dependencie:
+- Because of React use html inner of javascript we need to add another dependency:
 ```
 yarn add @babel/preset-react -D
 ```
