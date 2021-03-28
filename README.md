@@ -57,17 +57,17 @@ yarn add webpack-dev-server -D
 ```
 Add a devServer option on webpack.config.js
 
-**Running code with css**
+**Running code with css using SASS**
 For this we need to add two loaders:
 ```
-yarn add style-loader css-loader -D
+yarn add style-loader css-loader sass-loader node-sass -D
 
 Add it on webpack rules:
 
 {
-    test: /\.css$/,
+    test: /\.scss$/,
     exclude: /node_modules/,
-    use: ['style-loader', 'css-loader'] 
+    use: ['style-loader', 'css-loader', 'sass-loader'] 
 }
 ```
 
